@@ -17,10 +17,10 @@ export default function Main(){
 return(
 <>
 
-<div id="maindiv">
+<div id="maindivv">
 
  
-<div id="firstdiv">
+<div id="firstdivv">
     <br/>
 <div><h1 id="firstdivh1">looking for courses ?</h1></div>
 <br/>

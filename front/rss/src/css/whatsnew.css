@@ -1,0 +1,38 @@
+#container1{background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+.card11{margin-top: 5px;border-bottom: solid black 1px;display: grid; grid-template-columns: 20% 50% 30%;height: 210px;border-radius: 30px;}
+
+#replaydiv{border: solid black 1px;}
+#replaytxt1{text-align: center;border-bottom: solid black 1px;}
+#replayb1{background-color: black;margin-top: 5px;margin-left: 50px;border-radius: 12px;}
+#replayb1:hover{color:powderblue ;}
+#h3{margin-top: 50px;margin-left: 10px;}
+#div23 {}
+#middle1{display: grid;grid-template-columns: 65% 35%;}
+#comment{border: solid black 1px;border-radius: 7px;}
+.imgnew{border-radius: 30px}
+.txtfield{margin-top: 30px;}
+
+
+.btn-grad {background-image: linear-gradient(to right, #606c88 0%, #3f4c6b  51%, #606c88  100%);}
+     .btn-grad {
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        
+      }
+
+      .btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration:none;
+      }

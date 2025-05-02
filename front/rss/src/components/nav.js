@@ -24,8 +24,7 @@ return(
             
           >
            
-           <a href='/main.js'> <img id='logo'  src='https://static.vecteezy.com/system/resources/previews/005/216/733/non_2x/initial-letter-r-or-rk-monogram-logo-vector.jpg' alt='logo'/> </a>
-           
+         <Link to='/main.js' className='nav2link'> <img  id='logo'  src='https://static.vecteezy.com/system/resources/previews/005/216/733/non_2x/initial-letter-r-or-rk-monogram-logo-vector.jpg' alt='logo'/></Link>
             
           </IconButton>
           <Typography id='nav2taleb' variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -59,11 +58,11 @@ return(
          <div id='nav2margin'>
           <Button  color="inherit"><Link to='/signup.js' className='nav2link'> signup</Link></Button>
           
-          <Button color="inherit" > <Link to="/log.js" className='nav2link' >login</Link> </Button>
+          <Button color="inherit" > <Link to="/.js" className='nav2link' >login</Link> </Button>
 
           <Button color="inherit" >  <Link to='profile.js' className='nav2link'> profile  </Link> </Button>
           
-          <Button color="inherit" >  <Link to='whatsnew.js' className='nav2link'>  whatsnew </Link>  </Button>
+          <Button color="inherit" >  <Link to='/whatsnew.js' className='nav2link'>  whatsnew </Link>  </Button>
           </div>
         </Toolbar>
       </AppBar>
