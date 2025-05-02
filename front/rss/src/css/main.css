@@ -1,0 +1,63 @@
+#firstdivh1{ color: black;text-align: center;margin-top: 100px;font-size: 80px;font-style: oblique;font-family: serif;}
+#firstdiv1{background: #FEAC5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#seconddivh1{color:  black;margin-top: 60px;font-size: 50px;font-style: oblique;font-family: serif;}
+#seconddivh11{margin-right:20px ;color: black;margin-top: 60px;font-size: 50px;font-style: oblique;font-family: serif;}
+#thirddivh1{color: black;margin-top: 60px;font-size: 50px;margin-left: 150px;font-style: oblique;font-family: serif;}
+#seconddivimg{width: 350px;height:300px;margin-left: 200px;border-radius: 50px;}
+#thirddivimg{width: 350px;height:300px;border-radius: 50px;margin-left: 50px;}
+#part1{text-align: center;color:  black;font-size: 50px;font-style: oblique;font-family: serif;}
+#part1img{width: 200px;height:200px;margin-left: 500px;}
+#seconddiv{display:grid;grid-template-columns:50% 50% ;}
+#thirddiv{display:grid;grid-template-columns:50% 50% ;}
+#maindiv{background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     }
+
+
+     
+     
+
+     .btn-grad {background-image: linear-gradient(to right, #606c88 0%, #3f4c6b  51%, #606c88  100%)}
+     .btn-grad {
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration:none;
+      }
+     
+     
+     
+
+      .nextpageh1{text-align: center;font-size: 50px;color: beige;}
+      .nextpageh2{text-align: center;font-size: 20px;color: beige;font-style: oblique;font-family: serif;}
+      #card1{margin-left: 0px;}
+      #card2{margin-left: 400px}
+      #card3{margin-left: 800px;}
+      #nextpage{background: #bdc3c7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+      #middle{background: #FEAC5E;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+
+
+      

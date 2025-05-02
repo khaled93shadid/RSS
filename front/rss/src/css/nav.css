@@ -1,0 +1,33 @@
+
+
+
+#continer{display: grid;grid-template-columns:30% 30% 40%;;height:100px;}
+#ul>li{display: inline;transition:transform 0.2s;}
+#ul>li:hover{transform: scale(2.5);}
+#logo{width:100px;height:100px;}
+.li{color: aliceblue;margin-left:50px;font-size:large;font-family:emoji ;transition:transform 0.2s;}
+#ul{margin-top: 30px;}
+.atag{text-decoration: none;color:aliceblue;font-family: fantasy;transition:transform 0.2s;}
+.atag:hover{transform: scale(2.5);}
+#taleb{margin-left: 90px;font-family: fangsong;color: aliceblue;}
+#h1{margin-left: 400px;}
+#imgdiv:hover{transform: scale(1);}
+#h3div{background-color:aliceblue;}
+
+
+
+#nav2taleb{margin-left: 400px;font-size: 60px;font-family: fangsong;}
+.nav2link{text-decoration: none;color: aliceblue;}
+.nav2link:hover{color:rgb(150, 160, 161) ;}
+#nav2container{background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+
+
+  #nav3container{background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;}
+#nav2margin{margin-left: 410px;}
