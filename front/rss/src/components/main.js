@@ -6,9 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import EmailIcon from '@mui/icons-material/Email';
-import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-import CopyrightIcon from '@mui/icons-material/Copyright';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import XIcon from '@mui/icons-material/X';
 
 
 
@@ -200,16 +201,22 @@ return(
 
 <div id="middle"> 
     <br/>
-    <br/> 
-    <h3 className="nextpageh2">Contact Us:</h3>
-    <h3 className="nextpageh2"><EmailIcon/>RSS_TEAM@gmail.com</h3>
-    <h3 className="nextpageh2"><AddIcCallIcon/>TEL:962(799940145)</h3>
-    <h3 className="nextpageh2"><CopyrightIcon/>copyright 2025-RSS </h3>
-    <br/> 
-    <br/> 
-    <br/> 
-    <br/> 
-</div>
+    <div class="footer-basic">
+        <footer>
+            
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#"><EmailIcon/>RSS_TEAM@gmail.com</a></li>
+                
+            </ul>
+            <div class="social"><a href="#"> <InstagramIcon class="icon ion-social-instagram"/> </a><a href="#"> <FacebookIcon class="icon ion-social-instagram"/> </a><a href="#"><YouTubeIcon class="icon ion-social-instagram"/></a><a href="#"><XIcon class="icon ion-social-instagram"/></a></div>
+            <h1 class="copyright">RSS © 2025</h1>
+        </footer>
+    </div>
+</div>    
 
 </>
 )
