@@ -452,22 +452,8 @@ return(
 
 
 
-<div id='div3'>
 
 
-
-</div>
-
-
-</div>
-<div id='middle' > 
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
 
 </div>
 

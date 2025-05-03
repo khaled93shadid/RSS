@@ -5,9 +5,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import FiberNewIcon from '@mui/icons-material/FiberNew';
 import '../css/nav.css'
 import { Link } from 'react-router-dom';
-
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 export default function Nav(){
 return(
     <>
@@ -56,14 +59,24 @@ return(
             
           </IconButton>
          <div id='nav2margin'>
+         
+           <Button  color="inherit" > <Link to='/signup.js' className='nav2link'> <ManageAccountsIcon/></Link> </Button>
+           
+           <Button  color="inherit"><Link to="/login.js" className='nav2link' ><AccountBoxIcon /></Link></Button>
+           
+           <Button color="inherit" >  <Link to='profile.js' className='nav2link'> <AccountCircleIcon/>  </Link> </Button>
+           
+           <Button color="inherit" > <Link to='/whatsnew.js' className='nav2link'>  <FiberNewIcon/>  </Link>  </Button>
+
           <Button  color="inherit"><Link to='/signup.js' className='nav2link'> signup</Link></Button>
           
-          <Button color="inherit" > <Link to="/.js" className='nav2link' >login</Link> </Button>
+          <Button color="inherit" > <Link to="/login.js" className='nav2link' >login</Link> </Button>
 
           <Button color="inherit" >  <Link to='profile.js' className='nav2link'> profile  </Link> </Button>
           
           <Button color="inherit" >  <Link to='/whatsnew.js' className='nav2link'>  whatsnew </Link>  </Button>
-          </div>
+
+                    </div>
         </Toolbar>
       </AppBar>
       

@@ -1,4 +1,4 @@
-import '../css/login.css';
+import '../css/login.css'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -8,9 +8,21 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
 
-export default function Signup() {
 
-return(
+
+
+
+
+
+
+
+
+
+export default function Login(){
+
+    return(
+<>
+
 <div id='signupbody'>
 <br/>
 <Card sx={{ maxWidth: 700}} id="form" >
@@ -23,26 +35,20 @@ return(
 <Typography gutterBottom variant="h5" component="div">
             Welcome To R S S
           </Typography>
-<label><h4>First name:</h4></label>
-<input className='label1' type='text' placeholder="Enter your First Name" required />
-
-<label><h4>Last name:</h4></label>
-<input className='label1' type='text' placeholder="Enter your Last Name" required />
-
-<label><h4>Email:</h4></label>
+          <label><h4>Email:</h4></label>
 <input className='label1' type='email' placeholder="Enter your Email" required />
 
 <label><h4>passward:</h4></label>
 <input className='label1' type='password' placeholder="Enter your passward" required />
 
-<label><h4>passward Again:</h4></label>
-<input className='label1' type='password' placeholder="Enter your passward Again" required />
+
+
 <br/>
 <br/>
 </div>
 <div id='formBtnmargin'>
 <Button type='submit' variant="contained" disableElevation className='btn-grad' >
-      SignUp
+      SignIn
     </Button>
     </div>
     <br/>
@@ -55,5 +61,8 @@ return(
     <br/>
     <br/>
 </div>
-)
+
+</>
+
+    )
 }

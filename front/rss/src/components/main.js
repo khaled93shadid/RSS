@@ -192,31 +192,7 @@ return(
         </CardContent>
       </CardActionArea>
     </Card>
-
-<br/>
-<br/>
-<br/>
-<br/>
 </div>
-
-<div id="middle"> 
-    <br/>
-    <div class="footer-basic">
-        <footer>
-            
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#"><EmailIcon/>RSS_TEAM@gmail.com</a></li>
-                
-            </ul>
-            <div class="social"><a href="#"> <InstagramIcon class="icon ion-social-instagram"/> </a><a href="#"> <FacebookIcon class="icon ion-social-instagram"/> </a><a href="#"><YouTubeIcon class="icon ion-social-instagram"/></a><a href="#"><XIcon class="icon ion-social-instagram"/></a></div>
-            <h1 class="copyright">RSS © 2025</h1>
-        </footer>
-    </div>
-</div>    
 
 </>
 )
