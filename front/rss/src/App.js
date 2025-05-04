@@ -6,6 +6,7 @@ import Signup from './components/signup.js';
 import Whatsnew from './components/whatsnew.js';
 import Footer from './components/footer.js';
 import Login from './components/login.js';
+import Profile from './components/profile.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                <Route path="/signup.js" element={<Signup/>} />
                <Route path="/whatsnew.js" element={<Whatsnew/>} />
                <Route path="/login.js" element={<Login/>} />
+               <Route path="/profile.js" element={<Profile/>} />
               
                
                

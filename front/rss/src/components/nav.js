@@ -72,7 +72,7 @@ return(
           
           <Button color="inherit" > <Link to="/login.js" className='nav2link' >login</Link> </Button>
 
-          <Button color="inherit" >  <Link to='profile.js' className='nav2link'> profile  </Link> </Button>
+          <Button color="inherit" >  <Link to='/profile.js' className='nav2link'> profile  </Link> </Button>
           
           <Button color="inherit" >  <Link to='/whatsnew.js' className='nav2link'>  whatsnew </Link>  </Button>
 

@@ -18,7 +18,7 @@
 
 #nav2taleb{margin-left: 400px;font-size: 60px;font-family: fangsong;}
 .nav2link{text-decoration: none;color: aliceblue;}
-.nav2link:hover{color:rgb(150, 160, 161) ;}
+.nav2link:hover{color:goldenrod;}
 #nav2container{background: #000000;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
