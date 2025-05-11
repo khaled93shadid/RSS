@@ -1,4 +1,4 @@
-import '../css/login.css'
+import '../css/volunteers.css'
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -8,61 +8,53 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
 
+export default function Volunteers(){
 
-
-
-
-
-
-
-
-
-
-export default function Login(){
-
-    return(
+return(
 <>
-
-<div id='signupbody'>
+<div id='volunteersbackcolor'>
 <br/>
-<Card sx={{ maxWidth: 400}} id="form1" >
-      <CardActionArea >
-        <CardContent>
-          
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          <form >
-<div id='labelformmargin1'>
+<div>
+    <h1>Join</h1>
+       <h1>Our</h1>
+            <h1>Team</h1>
+            <img src=''/>
+</div>
+
+ <form >
+<div id='labelformmargin'>
 <Typography gutterBottom variant="h5" component="div">
             Welcome To R S S
           </Typography>
-          <label><h4>Email:</h4></label>
+<label><h4>First name:</h4></label>
+<input className='label1' type='text' placeholder="Enter your First Name" required />
+
+<label><h4>Last name:</h4></label>
+<input className='label1' type='text' placeholder="Enter your Last Name" required />
+
+<label><h4>Email:</h4></label>
 <input className='label1' type='email' placeholder="Enter your Email" required />
 
 <label><h4>passward:</h4></label>
 <input className='label1' type='password' placeholder="Enter your passward" required />
 
-
-
+<label><h4>passward Again:</h4></label>
+<input className='label1' type='password' placeholder="Enter your passward Again" required />
 <br/>
 <br/>
 </div>
-<div id='formBtnmargin1'>
+<div id='formBtnmargin'>
 <Button type='submit' variant="contained" disableElevation className='btn-grad' >
-      SignIn
+      SignUp
     </Button>
     </div>
     <br/>
     <br/>
 </form>
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <br/>
-    <br/>
+
+
 </div>
-
 </>
+)
 
-    )
 }

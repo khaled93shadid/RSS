@@ -33,10 +33,10 @@ return(
           <Typography id='nav2taleb' variant="h6" component="div" sx={{ flexGrow: 1 }}>
                        R S S     
           </Typography>
-          <Button color="inherit"><Link to='/signup.js' className='nav2link'> Courses</Link></Button>
-          <Button color="inherit"> <Link to="/login.js" className='nav2link' >Volunteers</Link> </Button>
+          <Button color="inherit"><Link to='/courses.js' className='nav2link'> Courses</Link></Button>
+          <Button color="inherit"> <Link to="/volunteers.js" className='nav2link' >Volunteers</Link> </Button>
           <Button color="inherit">  <Link to='profile.js' className='nav2link'> Events  </Link> </Button>
-          <Button color="inherit">  <Link to='whatsnew.js' className='nav2link'>  About </Link>  </Button>
+          <Button color="inherit">  <Link to='/about.js' className='nav2link'>  About </Link>  </Button>
           
         </Toolbar>
       </AppBar>

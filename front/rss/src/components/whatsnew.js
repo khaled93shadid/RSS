@@ -138,7 +138,7 @@ return(
 
 
             <div className='card11'>
-    <Card sx={{ maxWidth: 345 }} >
+    <Card sx={{ maxWidth: 345 }} id='cardbackcolor'>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -174,7 +174,7 @@ return(
     </Card>
 
        <div id='middle1'> <h3 id='h3'>Im enjoy watching my favourite team</h3> 
-       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360, bgcolor: 'background.paper' }}>
+       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360 }} >
      
       <form onSubmit={(Event)=>{
            Event.preventDefault();
@@ -192,7 +192,7 @@ return(
            
           onChange={(Event)=>{setcomment1(Event.target.value)}}
           />
-           <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> 
+           <div id='btnreplaymargin'> <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> </div>
            </form>
            </Box>
    
@@ -214,7 +214,6 @@ return(
       sx={{
         width: '100%',
         maxWidth: 380,
-        bgcolor: 'background.paper',
         position: 'relative',
         overflow: 'auto',
         maxHeight: 160,
@@ -245,7 +244,7 @@ return(
 
 
     <div className='card11'>
-                 <Card sx={{ maxWidth: 345 }} >
+                 <Card sx={{ maxWidth: 345 }} id='cardbackcolor' >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -278,7 +277,7 @@ return(
     </Card>
     
     <div id='middle1'> <h3 id='h3'>My breakfast</h3> 
-       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360, bgcolor: 'background.paper' }}>
+       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360,  }}>
      
       <form onSubmit={(Event)=>{
            Event.preventDefault();
@@ -295,7 +294,7 @@ return(
           value={comment2} 
           onChange={(Event)=>{setcomment2(Event.target.value)}}
           />
-           <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> 
+      <div id='btnreplaymargin'> <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> </div>
            </form>
            </Box>
    
@@ -317,7 +316,6 @@ return(
       sx={{
         width: '100%',
         maxWidth: 380,
-        bgcolor: 'background.paper',
         position: 'relative',
         overflow: 'auto',
         maxHeight: 160,
@@ -344,7 +342,7 @@ return(
 
 
     <div className='card11'>
-                 <Card sx={{ maxWidth: 345 }} >
+                 <Card sx={{ maxWidth: 345 }} id='cardbackcolor' >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -376,7 +374,7 @@ return(
     </Card>
  
     <div id='middle1'> <h3 id='h3'>reading book at my breaktime</h3> 
-       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360, bgcolor: 'background.paper' }}>
+       <Box id='box1' sx={{ width: '100%', height: 200, maxWidth: 360,}}>
      
       <form onSubmit={(Event)=>{
            Event.preventDefault();
@@ -392,7 +390,7 @@ return(
           value={comment3}
           onChange={(Event)=>{setcomment3(Event.target.value)}}
           />
-           <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> 
+         <div id='btnreplaymargin'> <Button size='small' className='btn-grad'  type='submit' variant="contained" disableElevation >Replay </Button> </div>
            </form>
            </Box>
    
@@ -411,10 +409,10 @@ return(
     </Stack>  
        
        <List
+
       sx={{
         width: '100%',
         maxWidth: 380,
-        bgcolor: 'background.paper',
         position: 'relative',
         overflow: 'auto',
         maxHeight: 160,

@@ -2,8 +2,12 @@
   background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
-.card11{margin-top: 5px;border-bottom: solid grey 0.01px;display: grid; grid-template-columns: 20% 50% 30%;height: 210px;border-radius: 30px;}
-
+.card11{margin-top: 5px;border-bottom: solid grey 0.01px;display: grid; grid-template-columns: 20% 50% 30%;height: 210px;border-radius: 30px;background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);}
+#cardbackcolor{background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ccc7af);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #d1ccb9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 #replaydiv{border: solid black 1px;}
 #replaytxt1{text-align: center;border-bottom: solid black 0.5px;}
 #replayb1{background-color: black;margin-top: 5px;margin-left: 50px;border-radius: 12px;}
@@ -14,7 +18,7 @@
 #comment{border: solid grey 1px;border-radius: 7px;}
 .imgnew{border-radius: 30px}
 .txtfield{margin-top: 30px;}
-
+#btnreplaymargin{margin-left: 60px;}
 
 .btn-grad {background-image: linear-gradient(to right, #606c88 0%, #3f4c6b  51%, #606c88  100%);}
      .btn-grad {
