@@ -281,7 +281,7 @@
   }
 
   .responsive-container-block.rightSide {
-    width: 100%;
+    width: 34%;
     height: 250px;
     margin-top: 0px;
     margin-right: 0px;
@@ -315,3 +315,9 @@
     width: 100%;
   }
 }
+
+#formBtnmargin1{margin-left: 40px;}
+#formmargin1{margin-left: 40px;}
+#font1{font-style: oblique;font-family: initial;font-size:70px;}
+
+.aboutush1{font-family: initial;font-size:30px;}

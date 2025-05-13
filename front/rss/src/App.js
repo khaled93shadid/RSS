@@ -10,6 +10,7 @@ import Profile from './components/profile.js';
 import Courses from './components/courses.js';
 import About from './components/about.js';
 import Volunteers from './components/volunteers.js';
+import Events from './components/events.js';
 function App() {
   return (
 
@@ -28,6 +29,7 @@ function App() {
                <Route path="/courses.js" element={<Courses/>} />
                <Route path="/about.js" element={<About/>} />
                <Route path="/volunteers.js" element={<Volunteers/>} />
+               <Route path="/events.js" element={<Events/>} />
               
                
                
