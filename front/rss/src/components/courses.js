@@ -6,14 +6,55 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import   {useState,useEffect}  from 'react';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+
+
+
+
+const style = {position: 'absolute',top: '50%',left: '50%',transform: 'translate(-50%, -50%)',width: 400,bgcolor: 'background.paper',border: '2px solid #000',boxShadow: 24,p: 4,};
+
+
 
 
 export default function Courses() {
+  const [openModalId, setOpenModalId] = useState(null);
+
+  const handleOpen = (productId) => {setOpenModalId(productId);};
+
+  const handleClose = () => {setOpenModalId(null);};
+
+const [products, setProducts] = useState([]);
+const [error, setError] = useState(null);
+
+useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("http://127.0.0.1:5050/api/products", {
+          method: "GET",
+          headers: { 'Content-Type': 'application/json' },
+        });
+        
+        if (!response) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) { console.error('Fetch error:', error); }
+    }
+
+    fetchData();
+  }, []);
+
+  if (error) {return <div>Error: {error}</div>;}
 
 
 return(
+  
 <>
-<div id="coursescontiner">
+<div id="coursescontiner" >
 <br/>
   <div id="coursescontiner1">
        <h1 id='coursesh1'>Get Started with RSS Courses</h1>
@@ -28,265 +69,55 @@ return(
   </div>
   
   <div id="coursescontiner3">
+
+    
+     
   
-           <Card sx={{ maxWidth: 300 }} id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://freerangestock.com/sample/78907/network-word-shows-global-communications-and-connection.jpg"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Network
-        </Typography>
-        
-        <Typography gutterBottom variant="h5" component="div">
-          (cs332)
-        </Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+  {products.map((product, index) => (
+        <div key={product._id}>
+        <Card sx={{ maxWidth: 300 }} id='coursescards' >
+          
+          <CardMedia
+            sx={{ height: 300 }}
+            image={product.pic}
+            title={product.name}/>
+          <CardContent>
+            
+            <Typography gutterBottom variant="h5" component="div">
+              {product.name}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="div">
+              ({product.num})
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Join</Button>
+            <Button onClick={() => handleOpen(product._id)} size="small">Learn More</Button>
+          </CardActions>
 
+        </Card>
+        <Modal
+            open={openModalId === product._id}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                {product.name} Description:
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                {product.dis}
+              </Typography>
+            </Box>
+          </Modal>
     
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://www.vikaspublishing.com/uploads/bookimages/vikas-books/9789325975590.jpg"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Computational Theory
-        </Typography>
-        
-        <Typography gutterBottom variant="h5" component="div">
-         (CS342)
-        </Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    </div>    
+      ))}    
 
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://play-lh.googleusercontent.com/K_V0JVjLtARUM8aAgo_-2hpPLGWE0_xnIk_Y-gqFpAKlDC3ywWirEsVTs0TPzQb9BA=w600-h300-pc0xffffff-pd"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Android</Typography>
-        
-        <Typography gutterBottom variant="h5" component="div">
-          (CS411)</Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://merriam-webster.com/assets/mw/images/article/art-wap-article-main/discreet-discrete-definitions-examples-11@1x.jpg"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Discrete
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          (CS142)
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://online.stanford.edu/sites/default/files/styles/embedded_large/public/2018-03/engineering-computer-science-algorithms-design-analysis_soe-ycsalgorithms.png?itok=9li5BBeK"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Algorithm(CS351)
-       
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-     
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSxI9Ghv2aq4qo9GrvzKFOJ42LDmGL6tL-Q&s"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Digital
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-        (CS220)  
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-     
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://4kwallpapers.com/images/wallpapers/java-black-2732x2732-16069.png"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Java
-        </Typography>
-       
-        <Typography gutterBottom variant="h5" component="div">
-          (CS310)
-        </Typography>
-       
-       </CardContent>
-      <CardActions>
-        <Button size="small">Join</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-     
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://media.licdn.com/dms/image/v2/D5612AQExcra78IJOvw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1708845254160?e=1752105600&v=beta&t=OZvBu8LBg1JK-czKhbXuYiTY9oZxJspAg8yOLLXQu20"
-        
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Operating System
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          (CS130)
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Join</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://c8.alamy.com/comp/J3YFWD/monitor-with-message-software-engineering-and-hands-on-a-keyboard-J3YFWD.jpg"
-       
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Software Engineer
-        </Typography>
-        
-        <Typography gutterBottom variant="h5" component="div">
-          (CS240)
-        </Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Join</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://www.techfunnel.com/wp-content/uploads/2020/10/Visual-programming.png"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Visual Programming
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          (CIS 214)
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Join</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://img.freepik.com/free-vector/gradient-world-wide-web-internet_78370-4896.jpg?semt=ais_hybrid&w=740"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          WEB
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          (BIT381)
-        </Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Join</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-    
-           <Card sx={{ maxWidth: 300 }}id='coursescards'>
-      <CardMedia
-        sx={{ height: 300 }}
-        image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png"
-       
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Python
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          (CS111)
-        </Typography>
-        
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card> 
 
   </div>
+
   <div id="coursescontiner2">
        <h1 id='coursesh2'>Categories</h1>
     

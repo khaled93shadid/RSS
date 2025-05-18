@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import '../css/profile.css';
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -13,25 +13,51 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import CardActions from '@mui/material/CardActions';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+const style = {position: 'absolute',top: '50%',left: '50%',transform: 'translate(-50%, -50%)',width: 400,bgcolor: 'background.paper',border: '2px solid #000',boxShadow: 24,p: 4,};
+
+
+                    
+
+ 
 
 export default function Profile(){
    const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [user, setuser] = useState([]);
+  const [id, setid] = useState();
+  const [error, setError] = useState(null);
+   var token = sessionStorage.getItem('auth');
+  if(!token){window.location.href='login.js'}
+ 
+
+useEffect(()=>{
+async function fetchData() {
+
+  try{
+    const response = await fetch("http://127.0.0.1:5050/api/getuserbyemail", {
+          method: "GET",
+          headers: { 'Content-Type': 'application/json' },
+        });
+        if(!response){throw new Error(`HTTP error! status: ${response.status}`);}
+
+        const data = await response.json();
+        setuser(data);
+        
+
+
+  }//try
+  catch (error) { console.log(error)}
+  
+}//fetch
+
+fetchData();
+},[])
 
 return(
+ 
 <>
+
  <div>
       <Modal
         open={open}
@@ -40,25 +66,25 @@ return(
         aria-describedby="modal-modal-description"
       >
         <Box  sx={style} id='formsettingcolor'>
-           <form id='marginsettingform'>
+           <form id='marginsettingform' >
           <div >
           <Typography gutterBottom variant="h5" component="div">
                       Setup Profile
                     </Typography>
           <label><h4>First name:</h4></label>
-          <input className='label1' type='text' placeholder="Enter your First Name"  />
+          <input className='label1' id='SetupProfilefname' type='text' placeholder="Enter your First Name"  />
           
           <label><h4>Last name:</h4></label>
-          <input className='label1' type='text' placeholder="Enter your Last Name"  />
+          <input className='label1' id='SetupProilelfname' type='text' placeholder="Enter your Last Name"  />
           
           <label><h4>Profile Picture:</h4></label>
-          <input className='label1' type='text' placeholder="Add your picture"  />
+          <input className='label1' id='SetupProfilepic' type='text' placeholder="Add your picture"  />
           
           <br/>
           <br/>
           </div>
           <div id='marginsettinformgbtn'>
-          <Button type='submit' variant="contained" disableElevation className='btn-grad' >
+          <Button  type='submit' variant="contained" disableElevation className='btn-grad' >
                 SetUp
               </Button>
               </div>
@@ -68,15 +94,16 @@ return(
         </Box>
       </Modal>
     </div>
-<div id='profilecontiner'>
+{user.map(us=>(
+<div id='profilecontiner' >
        <div  id='profilecontiner1'>
-        <h1 id='profilecontinerh1'> welcome: </h1>
-        <h1 id='profilecontinerh1'> Khaled Shadid </h1>
+        <h1 id='profilecontinerh11'> welcome: </h1>
+        <h1 id='profilecontinerh1'>{us.first_name+""+us.last_name} </h1>
        </div>
        
        <div id='profilecontiner2'>
-          <img id='profilecontinerimg'  src='https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg'/>
-          <button onClick={handleOpen} id='settingbtn'><SettingsIcon/></button>
+          <img id='profilecontinerimg'  src={us.picture} alt="pic"/>
+          
        </div>
 
        <br/>
@@ -85,6 +112,9 @@ return(
        <br/>
        <br/>
 </div>
+
+
+))}    
 
 <div id='bodycontiner1' >
   
@@ -153,42 +183,11 @@ return(
     </Card>
 
     <br/>
-    <div><h1 id='bodyh1'>what do you think,share something... </h1></div>
+    <div><h1 id='bodyh1'>Good Luck... </h1></div>
     <div id='shareborder'>
     <div id='share'>
         
-      <form onSubmit={(Event)=>{Event.preventDefault();
-        
-      }}>
-        
-      <Box
       
-      sx={{ '& .MuiTextField-root': { m: 1, width: '50ch' } }}
-      
-      autoComplete="off"
-      id='box'
-    >
-      <TextField
-          id="outlined-multiline-static"
-          label="image url"
-          multiline
-          rows={3}
-          
-          //onChange={(Event)=>{setshareimg(Event.target.value)}}
-        />
-      <TextField
-          id="outlined-multiline-static"
-          label="write here"
-          multiline
-          rows={3}
-          
-          //onChange={(Event)=>{setsharetxt(Event.target.value)}}
-        />
-        <br />
-        <br />
-       <div id='sharebtnmargin'> <Button  type='submit' variant="contained" disableElevation className='btn-grad'>share post</Button> </div>
-    </Box>
-        </form>
         
         </div>
         </div>
@@ -198,4 +197,5 @@ return(
 </div>
 </>
 )
+
 }

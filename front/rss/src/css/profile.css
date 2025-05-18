@@ -2,6 +2,7 @@
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);}
    #profilecontinerh1{font-style: oblique;font-family: initial;margin-left: 450px;}
+   #profilecontinerh11{font-style: oblique;font-family: initial;margin-left: 450px;}
    #profilecontiner2{margin-top: 40px;}
 
      #profilecontinerimg{width: 100px;height:100px;border-radius: 50px;margin-left: 63px;}
@@ -10,7 +11,7 @@
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);display: grid;grid-template-columns: 55% 45%;}
 
-#bodyh1{color: black;margin-left: 350px;font-style: oblique;font-family: initial;font-size:70px;}
+#bodyh1{color: black;margin-left: 460px;font-style: oblique;font-family: initial;font-size:70px;}
 #bodycontiner2{background: #ADA996;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);}
@@ -35,4 +36,4 @@
 #share2{background-color:black;border-radius: 1px;}
 #sharephoto{width: 400px;height: 400px;margin-left: 450px;}
 #sharebtnmargin{margin-left: 400px;}
-#shareborder{border: solid gray 1px;border-radius: 50px;}
+#shareborder{}

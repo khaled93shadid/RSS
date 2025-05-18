@@ -80,7 +80,7 @@ return(
 <div id="middle"> 
     <br/>
 <h1 className="nextpageh1">its not a secret recipe: </h1> 
-<h3 className="nextpageh2">its a proven strategy developed by RSS team </h3>
+<h3 className="nextpageh2">Its All About Hard Work And Passion </h3>
 <br/> 
 </div>
 
@@ -98,12 +98,11 @@ return(
           
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography id="cardshift" gutterBottom variant="h5" component="div">
             Enjoy Learning
               </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+           
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -119,12 +118,11 @@ return(
           
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography id="cardshift" gutterBottom variant="h5" component="div">
             Become creative
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -140,12 +138,11 @@ return(
           
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography id="cardshift" gutterBottom variant="h5" component="div">
             Easy learning
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -161,12 +158,11 @@ return(
           
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Become creative
+          <Typography id="cardshift" gutterBottom variant="h5" component="div">
+            Level up
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+           
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -182,12 +178,11 @@ return(
           
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Enjoy Learning
+          <Typography id="cardshift" gutterBottom variant="h5" component="div">
+            thinking better
               </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            
           </Typography>
         </CardContent>
       </CardActionArea>
