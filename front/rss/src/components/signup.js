@@ -21,8 +21,8 @@ export default function Signup() {
 
 return(
 <>
-  
-      
+  <div id='signupbody'>
+      <br/>
     
         <form  id='khs1form' onSubmit={(f)=>{
            f.preventDefault();
@@ -86,7 +86,7 @@ return(
          </form>
       
       
-  
+  </div>
 
 </>
 )
