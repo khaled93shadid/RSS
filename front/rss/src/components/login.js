@@ -23,15 +23,17 @@ export default function Login(){
 
     return(
 <>
-
-<div id='signupbody'>
-<br/>
-<Card sx={{ maxWidth: 400}} id="form1" >
-      <CardActionArea >
-        <CardContent>
-          
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          <form id='loginformpage' onSubmit={(e)=>{
+ <div id='signupbody'>
+    
+      <br/>
+      <br/>
+      <br/>
+      
+      <br/>
+      <br/>
+    
+    
+        <form  id='khs1form' onSubmit={(e)=>{
              e.preventDefault();
              const loginUrl="http://127.0.0.1:5050/api/login"
              const email1 =document.getElementById('loginformemail').value ;
@@ -52,37 +54,65 @@ export default function Login(){
             catch(error){console.log(error)}
             
          }}>
-<div id='labelformmargin1'>
+
+          <Card sx={{ maxWidth: 350}} id="form" >
+      <CardActionArea >
+        <CardContent >
+          
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+         
+<div id='labelformmargin'>
 <Typography gutterBottom variant="h5" component="div">
-            Welcome To R S S
+           <h1 id="signupptag">signin</h1>
           </Typography>
-          <label><h4>Email:</h4></label>
-<input className='label1' id='loginformemail' type='email' placeholder="Enter your Email" required />
-
-<label><h4>passward:</h4></label>
-<input className='label1' id='loginformpassword' type='password' placeholder="Enter your passward" required />
+        
 
 
 
+
+<input className='input123'   type='email' id='loginformemail' placeholder="Enter your Email" required />
+<br/>
+<br/>
+<br/>
+
+
+<input className='input123'   type='password' id='loginformpassword' placeholder="Enter your passward" required />
+
+<br/>
 <br/>
 <br/>
 </div>
-<div id='formBtnmargin11'>
-<Button type='submit' variant="contained" disableElevation className='btn-grad' >
-      SignIn
+<div id='formBtnmargin'>
+<Button   type="submit" variant="contained" disableElevation  className='btn-grad'>
+      Signin
     </Button>
     </div>
     <br/>
     <br/>
-</form>
+    <br/>
+    <br/>
+
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
-    <br/>
-    <br/>
-</div>
 
+         </form>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+  </div>
 </>
 
     )

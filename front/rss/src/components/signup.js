@@ -22,7 +22,14 @@ export default function Signup() {
 return(
 <>
   <div id='signupbody'>
+    
       <br/>
+      <br/>
+      <br/>
+      
+      <br/>
+      <br/>
+    
     
         <form  id='khs1form' onSubmit={(f)=>{
            f.preventDefault();
@@ -44,7 +51,7 @@ return(
            
                       catch(error){console.log(error)}   }}>
 
-          <Card sx={{ maxWidth: 700}} id="form" >
+          <Card sx={{ maxWidth: 350}} id="form" >
       <CardActionArea >
         <CardContent >
           
@@ -52,26 +59,35 @@ return(
          
 <div id='labelformmargin'>
 <Typography gutterBottom variant="h5" component="div">
-            Welcome To R S S
+           <h1 id="signupptag">signup</h1>
           </Typography>
-          
-<label><h4>First name:</h4></label>
-<input  type='text' id='signupfirstname' placeholder="Enter your First Name" required />
+        
 
-<label><h4>Last name:</h4></label>
-<input  type='text' id='signuplastname' placeholder="Enter your Last Name" required />
+<input className='input123'  type='text' id='signupfirstname' placeholder="Enter your First Name" required />
+<br/>
+<br/>
+<br/>
 
-<label><h4>Email:</h4></label>
-<input   type='email' id='signup1email' placeholder="Enter your Email" required />
+<input className='input123'  type='text' id='signuplastname' placeholder="Enter your Last Name" required />
+<br/>
+<br/>
+<br/>
 
-<label><h4>password:</h4></label>
-<input   type='password' id='signup1Password' placeholder="Enter your passward" required />
 
+<input className='input123'   type='email' id='signup1email' placeholder="Enter your Email" required />
+<br/>
+<br/>
+<br/>
+
+
+<input className='input123'   type='password' id='signup1Password' placeholder="Enter your passward" required />
+
+<br/>
 <br/>
 <br/>
 </div>
 <div id='formBtnmargin'>
-<Button  type="submit" variant="contained" disableElevation  className='btn-grad'>
+<Button   type="submit" variant="contained" disableElevation  className='btn-grad'>
       SignUp
     </Button>
     </div>
@@ -84,7 +100,16 @@ return(
     </Card>
 
          </form>
-      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       
   </div>
 
